@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import data from './data.json'
+import {Link} from 'react-router-dom'
 
 class RenderHomeMasonry extends Component {
 	render() {
@@ -8,7 +9,7 @@ class RenderHomeMasonry extends Component {
                 {
 					data.PetList.map((petsListed, i) => {
 						return (
-                            <div class="max-w-sm rounded overflow-hidden border border-gray-200 rounded-xl">
+                            <Link to={petsListed.link} class="max-w-sm rounded overflow-hidden border border-gray-200 rounded-xl">
                                 <img class="w-full h-full" src={petsListed.img} alt="Sunset in the mountains" />
                                 <div class="px-6 py-2 mt-2">
                                     <h3 class="font-bold text-lg mb-2 col-span-1">{petsListed.name}</h3>
@@ -19,7 +20,7 @@ class RenderHomeMasonry extends Component {
                                         <h4 class="font-base text-sm mb-2 col-span-1 text-right">{petsListed.distance} kilometers</h4>
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
 						);
 					})
 				}

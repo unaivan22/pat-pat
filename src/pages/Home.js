@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-// import RenderHomeMasonry from './data/RenderHomeGrid'
+import RenderHomeMasonry from './data/RenderHomeMasonry'
 import RenderHomeGrid from './data/RenderHomeGrid'
 
 
@@ -62,6 +62,7 @@ export default function Home() {
 
         <div className='container mx-auto mt-12'>
             <RenderHomeGrid />
+            {/* <RenderHomeMasonry /> */}
         </div>
 
         <Footer />
